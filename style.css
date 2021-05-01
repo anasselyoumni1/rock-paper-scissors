@@ -1,0 +1,58 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #b8b8ff;
+}
+
+.header { 
+    display: flex;
+    flex-direction: column;
+    min-height: 15vh;
+}
+.ronde {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+button{ 
+    padding: 25px;
+    border: none;
+    margin: 20px;
+    background-color: white;
+    outline: none;
+    font-size: 20px;
+}
+
+.result{
+    text-align: center;    
+}
+
+.title { 
+    text-align: center;
+}
+
+.score { 
+    display: flex;
+}
+
+.playerscore{
+    padding-left: 30px;
+}
+.computerscore{
+padding-left: 30px;
+}
+
+.winner{
+    display: none;
+}
