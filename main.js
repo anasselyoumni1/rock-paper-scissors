@@ -5,12 +5,14 @@ const scissors = document.querySelector("#scissors");
 let result = document.querySelector(".result");
 let computercoutner = document.querySelector("#computercounter");
 let playercounter = document.querySelector("#playercounter");
+const winner = document.querySelector("#winner");
+
 options = [
     'rock',
     'paper', 
     'scissors' 
 ]
-
+let counter = 0;
 let computer = 0;
 let player = 0;
 rock.addEventListener("click", function(){
@@ -31,27 +33,30 @@ function computerPlay (){
 
 function playRound(playerSelection, computerSelection){
     if(playerSelection == computerSelection) {
-        score(0, 0);
+        // score(0, 0);
         // result.style.color = "grey";
-        // return result.innerHTML = "Jullie hebben beide het zelfde";
+        return result.innerHTML = "Jullie hebben beide het zelfde";
     } 
     else if (computerSelection == options[0] && playerSelection == options[2] ||
                computerSelection == options[1] && playerSelection == options[0] ||
                computerSelection == options[2] && playerSelection == options[1]){
-        computercounter.innerHTML = `computer: ${computer++}`;
+        computercounter.innerHTML = `${computer++}`;
         // score(computer++, 0);
         
     } 
     else {
-        // computer.innerHTML = 0;
-        playercounter.innerHTML = `jij: ${player++}`;
+        playercounter.innerHTML = `${counter++}`;
         score(0, player++);
     }
 }
 
 function score (computerScore, playerScore){
-    if (computerScore == 5 || playerScore == 5){ 
+    if (computerScore == 5){ 
+        winner.innerHTML = "Helaas de computer heeft gewonnen."
         disable();
+    }else if (playerScore == 5){
+        disable();
+        winner.innerHTML = "Goed gedaan je hebt gewonnen."
     }
 }
 

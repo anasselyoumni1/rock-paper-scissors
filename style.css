@@ -47,10 +47,17 @@ button{
 }
 
 .playerscore{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     padding-left: 30px;
 }
 .computerscore{
-padding-left: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 30px;
 }
 
 .winner{
